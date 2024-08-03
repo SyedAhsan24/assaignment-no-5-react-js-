@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+.error {
+  color: #0f0;
+}
+section {
+  position: relative;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  height: 500px;
+  background: #000;
+  box-shadow: 0 0 50px #0ef;
+  border-radius: 20px;
+  padding: 40px;
+  overflow: hidden;
+}
+section:hover {
+  animation: animate 1s linear infinite;
+}
+@keyframes animate {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.signin {
+  width: 100%;
+}
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+form {
+  width: 100%;
+}
+.content h2 {
+  font-size: 2em;
+  color: #0f0;
+  text-transform: uppercase;
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.inputBox {
+  position: relative;
+  width: 100%;
+}
+.inputBox input {
+  position: relative;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  padding: 25px 10px 7.5px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+}
+.inputBox i {
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #aaa;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.inputBox input:focus ~ i,
+.inputBox input:valid ~ i {
+  transform: translateY(-7.5px);
+  font-size: 0.8em;
+  color: #fff;
+}
+.links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.links a {
+  color: #fff;
+  text-decoration: none;
+}
+.links a:nth-child(2) {
+  color: #0f0;
+  font-weight: 600;
+}
+.inputBox input[type="submit"] {
+  padding: 10px;
+  background: #0f0;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.35em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+input[type="submit"]:active {
+  opacity: 0.6;
+}
+@media only screen and (max-width: 600px) {
+  section {
+    width: 100%;
+  }
+}
